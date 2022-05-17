@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_base"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.angela.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_feesFragment"
+            app:destination="@id/feesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_academicFragment2"
+            app:destination="@id/academicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.angela.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/feesFragment"
+        android:name="com.example.angela.FeesFragment"
+        android:label="fragment_fees"
+        tools:layout="@layout/fragment_fees" />
+    <fragment
+        android:id="@+id/academicFragment"
+        android:name="com.example.angela.AcademicFragment"
+        android:label="fragment_academic"
+        tools:layout="@layout/fragment_academic" >
+        <action
+            android:id="@+id/action_academicFragment_to_sportsFragment"
+            app:destination="@id/sportsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sportsFragment"
+        android:name="com.example.angela.sportsFragment"
+        android:label="fragment_sports"
+        tools:layout="@layout/fragment_sports" />
+</navigation>
